@@ -43,7 +43,6 @@
     <Compile Include="audioformat\flac\FLACWaveHeader.cs" />
     <Compile Include="audioformat\WaveHeader.cs" />
     <Compile Include="audioformat\WaveStream.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="structure\data\ChannelAssignment.cs" />
     <Compile Include="structure\data\Frame.cs" />

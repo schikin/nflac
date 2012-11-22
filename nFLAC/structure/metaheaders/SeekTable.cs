@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using org.nflac.structure.exceptions;
+using org.nflac.structure.exceptions.stream;
 
 namespace org.nflac.structure.metaheaders
 {

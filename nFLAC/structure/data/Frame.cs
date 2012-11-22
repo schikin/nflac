@@ -108,7 +108,7 @@ namespace org.nflac.structure.data
         /// 
         /// Format description: http://flac.sourceforge.net/format.html#frame_header
         /// </summary>
-        /// <param name="stream">The stream to frame header from</param>
+        /// <param name="stream">The stream to read frame header from</param>
         public void Decode(Stream stream, StreamInfo streamInfo)
         {
             ushort buffer;
@@ -227,14 +227,17 @@ namespace org.nflac.structure.data
                     sampleRate = 96000;
                     break;
                 case 12:
+                    sampleRate = 0;
                     sampleRateBytes = 1;
                     sampleRateMultiplicator = 1000;
                     break;
                 case 13:
+                    sampleRate = 0;
                     sampleRateBytes = 2;
                     sampleRateMultiplicator = 1;
                     break;
                 case 14:
+                    sampleRate = 0;
                     sampleRateBytes = 2;
                     sampleRateMultiplicator = 10;
                     break;

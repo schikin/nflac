@@ -31,20 +31,20 @@ namespace org.nflac.structure
 
         private const ulong FLAC_HEADER = 0x664C6143; //fLaC in ASCII
 
-        //stream info
-        public FlacFile()
-        {
-        }
-
         public FlacFile(String file)
         {
             fileName = file;
+
+            inputStream = File.OpenRead(fileName);
+        }
+
+        public FlacFile(Stream inputStream)
+        {
+            this.inputStream = inputStream;
         }
 
         public void ParseFile()
         {
-            inputStream = File.OpenRead(fileName);
-
             try
             {
 

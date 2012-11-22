@@ -13,6 +13,8 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
+#Ignore test reports
+TestResults/*
 [Bb]in
 [Dd]ebug*/
 *.sbr

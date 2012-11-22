@@ -124,19 +124,19 @@ namespace org.nflac.structure.metaheaders
 
             ret = base.ToString();
 
-            ret += "\n Minimum block size: " + minimumBlockSize + " samples";
-            ret += "\n Maximum block size: " + maximumBlockSize + " samples";
+            ret += Environment.NewLine + " Minimum block size: " + minimumBlockSize + " samples";
+            ret += Environment.NewLine + " Maximum block size: " + maximumBlockSize + " samples";
 
-            ret += "\n Minimum frame size: " + minimumFrameSize + " bytes";
-            ret += "\n Maximum frame size: " + maximumFrameSize + " bytes";
+            ret += Environment.NewLine + " Minimum frame size: " + minimumFrameSize + " bytes";
+            ret += Environment.NewLine + " Maximum frame size: " + maximumFrameSize + " bytes";
 
-            ret += "\n Sample rate: " + sampleRate + " Hz";
-            ret += "\n Number of channels: " + numberOfChannels;
+            ret += Environment.NewLine + " Sample rate: " + sampleRate + " Hz";
+            ret += Environment.NewLine + " Number of channels: " + numberOfChannels;
 
-            ret += "\n Bits per sample: " + bitsPerSample;
-            ret += "\n Total samples: " + totalSamples;
+            ret += Environment.NewLine + " Bits per sample: " + bitsPerSample;
+            ret += Environment.NewLine + " Total samples: " + totalSamples;
 
-            ret += "\n MD5: " + BitConverter.ToString(md5).Replace("-", "").ToLower();
+            ret += Environment.NewLine + " MD5: " + BitConverter.ToString(md5).Replace("-", "").ToLower();
 
 
 

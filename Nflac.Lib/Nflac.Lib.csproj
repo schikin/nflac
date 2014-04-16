@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89F82027-3D20-48A0-9022-95A54B455D82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Org.Nflac</RootNamespace>
+    <AssemblyName>Nflac.Lib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audioformat\AudioDecoder.cs" />
+    <Compile Include="Audioformat\AudioEncoder.cs" />
+    <Compile Include="Audioformat\MultiplexedFrame.cs" />
+    <Compile Include="Flac\Exceptions\FlacHeaderException.cs" />
+    <Compile Include="Flac\Exceptions\InvalidSampleNumber.cs" />
+    <Compile Include="Flac\Integration\FlacAudioStream.cs" />
+    <Compile Include="Flac\Integration\FlacDecoder.cs" />
+    <Compile Include="Flac\Integration\FLACNFlacInfo.cs" />
+    <Compile Include="Audioformat\AudioStream.cs" />
+    <Compile Include="Audioformat\NFlacStream.cs" />
+    <Compile Include="Audioformat\StreamInfo.cs" />
+    <Compile Include="Wave\Exception\CompressionUnsupported.cs" />
+    <Compile Include="Wave\Exception\HeaderUnsupported.cs" />
+    <Compile Include="Wave\Exception\InvalidPositionException.cs" />
+    <Compile Include="Wave\Util\WaveStream.cs" />
+    <Compile Include="Wave\WaveCompression.cs" />
+    <Compile Include="Wave\WaveEncoder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Flac\Data\ChannelAssignment.cs" />
+    <Compile Include="Flac\Data\Frame.cs" />
+    <Compile Include="Flac\Data\Subframe.cs" />
+    <Compile Include="Flac\Data\SubframeType.cs" />
+    <Compile Include="Flac\Exceptions\IncorrectStreamException.cs" />
+    <Compile Include="Flac\Exceptions\LostSynchronizationException.cs" />
+    <Compile Include="Flac\Exceptions\MalformedFileException.cs" />
+    <Compile Include="Flac\Exceptions\PCMStreamNotOpened.cs" />
+    <Compile Include="Flac\Exceptions\UnexpectedEndOfStreamException.cs" />
+    <Compile Include="Flac\FlacFile.cs" />
+    <Compile Include="Flac\Integration\FLACPCMStream.cs" />
+    <Compile Include="Audioformat\IPCMStream.cs" />
+    <Compile Include="Flac\Metaheaders\Application.cs" />
+    <Compile Include="Flac\Metaheaders\BlockType.cs" />
+    <Compile Include="Flac\Metaheaders\CueSheet.cs" />
+    <Compile Include="Flac\Metadata.cs" />
+    <Compile Include="Flac\Metaheaders\Padding.cs" />
+    <Compile Include="Flac\Metaheaders\Picture.cs" />
+    <Compile Include="Flac\Metaheaders\Reserved.cs" />
+    <Compile Include="Flac\Metaheaders\SeekPoint.cs" />
+    <Compile Include="Flac\Metaheaders\SeekTable.cs" />
+    <Compile Include="Flac\Metaheaders\StreamInfo.cs" />
+    <Compile Include="Flac\Metaheaders\Unknown.cs" />
+    <Compile Include="Flac\Metaheaders\VorbisComment.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Album.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Artist.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Contact.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Copyright.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Custom.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Date.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Description.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Genre.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\ISRC.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\License.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Location.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Organization.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Performer.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Title.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\TrackNumber.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\Comments\Version.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\VorbisCommentType.cs" />
+    <Compile Include="Flac\Metaheaders\Vorbis\VorbisUserComment.cs" />
+    <Compile Include="Flac\Util\AugmentedStream.cs" />
+    <Compile Include="Flac\Util\BitReader.cs" />
+    <Compile Include="Flac\Util\BitWriter.cs" />
+    <Compile Include="Flac\Util\CRC16.cs" />
+    <Compile Include="Flac\Util\CRC8.cs" />
+    <Compile Include="Flac\Util\StreamReader.cs" />
+    <Compile Include="Wave\WaveStreamInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
